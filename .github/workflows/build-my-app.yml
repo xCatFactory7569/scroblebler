@@ -1,0 +1,32 @@
+name: Build my patched app
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Use Xcode 16.4 if it is installed
+        run: |
+          if [ -d /Applications/Xcode_16.4.app ]; then
+            sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer
+          fi
+          xcodebuild -version
+
+      - name: Build the app
+        run: |
+          echo "MACOS_MIN := 12.0" > Local.mk
+          make app CONFIGURATION=release
+
+      - name: Zip the app
+        run: ditto -c -k --keepParent build/Scroblebler.app Scroblebler-patched.zip
+
+      - name: Save the zip so it can be downloaded
+        uses: actions/upload-artifact@v4
+        with:
+          name: Scroblebler-patched
+          path: Scroblebler-patched.zip
