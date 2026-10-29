@@ -25,6 +25,12 @@ actor MusicValidator {
         "com.coppertino.Vox",
         "io.foobar2000.player",
         "com.doppler-music.Doppler",
+        "com.commonwealthrecordings.Vibe",
+        "com.heartached.noctis",
+        "vr.HiFidelity",
+        "org.Petrichor",
+        "com.afalphy.sylvakru",
+        "com.catnapgames.playermac",
     ]
 
     // MARK: - Cache
