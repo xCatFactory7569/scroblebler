@@ -31,6 +31,7 @@ actor MusicValidator {
         "org.Petrichor",
         "com.afalphy.sylvakru",
         "com.catnapgames.playermac",
+        "com.cokesoft.mp3player",
     ]
 
     // MARK: - Cache
