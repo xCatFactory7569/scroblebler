@@ -32,6 +32,8 @@ actor MusicValidator {
         "com.afalphy.sylvakru",
         "com.catnapgames.playermac",
         "com.cokesoft.mp3player",
+        "com.musopen.moonlight",
+        
     ]
 
     // MARK: - Cache
