@@ -33,7 +33,6 @@ actor MusicValidator {
         "com.catnapgames.playermac",
         "com.cokesoft.mp3player",
         "com.musopen.moonlight",
-        "com.audirvana.Audirvana-Studio",
         
     ]
 
